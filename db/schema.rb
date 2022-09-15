@@ -18,7 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_15_135453) do
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "creator_id"
+    # t.integer "creator_id"
     t.index ["creator_id"], name: "index_events_on_creator_id"
   end
 
