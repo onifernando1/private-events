@@ -1,0 +1,14 @@
+Form time 
+
+<%=form_with model: @event, data:{turbo:false} do |form| %>
+<%=form.label :title, "Title:" %>
+<%=form.text_field :title %>
+<%=form.label :description, "Description:" %>
+<%=form.text_field :description %>
+<%=form.label :date, "Date:" %>
+<%=form.date_field :date %>
+<%=form.label :location, "Location:" %>
+<%=form.text_field :location %>
+<%=form.submit "Submit"%>
+<%end%>
+
