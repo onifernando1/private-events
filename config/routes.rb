@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :events
   resources :users
+  resources :invites
   root "events#index"
 end
