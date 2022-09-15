@@ -1,4 +1,8 @@
 Users events:
-<% if User.first.events.first%>
-<%= User.first.events.first%>
+
+<%= @user.events.each do |event|%>
+<%=event.title %>
+<%=event.description%>
+<%=event.date%>
+<%=event.location%>
 <%end%>
