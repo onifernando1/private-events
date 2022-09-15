@@ -13,11 +13,12 @@ class InvitesController < ApplicationController
     end 
 
     def create 
-        @invite = current_user.invite.build()
+        @event = Event.find(params[:event_id])
+        @invite = Invite.new(attended_event_id: @event.id, attendee_id: current_user.id)
         if @invite.save
-            redirect_to @invite
+            redirect_to @event 
         else 
-            render :new, status: :unprocessable_entity
+            render events_path(@event), status: :unprocessable_entity
         end 
     end 
 

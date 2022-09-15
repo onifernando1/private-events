@@ -1,9 +1,11 @@
-<%=@event%>
-<%=@event.title%>
-<%=@event.description%>
-<%=@event.date%>
-<%=@event.location%>
-Enroll button <%=  %>
+<div><%=@event%></div>    
+<div><%=@event.title%></div>
+<div><%=@event.description%></div>
+<div><%=@event.date%></div>
+<div><%=@event.location%></div>
+<%= form_with model: @invite do |form|%>
+<%=form.submit "Attend!"%>
+<%end%>
 
 
 
