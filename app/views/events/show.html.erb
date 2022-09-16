@@ -1,13 +1,17 @@
-<div><%=@event%></div>    
 <div><%=@event.title%></div>
-<div><%=@event.description%></div>
-<div><%=@event.date%></div>
-<div><%=@event.location%></div>
+<div>Description: <%=@event.description%></div>
+<div>Date: <%=@event.date%></div>
+<div>Location: <%=@event.location%></div>
 <%=button_to "Attend", invites_path(event_id: @event.id)%>
+<br/>
 <div>Attendees:</div>
 <%@event.attendees.each do |attendee|%>
+<%if attendee.name%>
 <%=attendee.name%>
+<br/>
+<%end%>
 <%end %>
+
 
 
 
