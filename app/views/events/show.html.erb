@@ -6,7 +6,7 @@
 <%=button_to "Attend", invites_path(event_id: @event.id)%>
 <div>Attendees:</div>
 <%@event.attendees.each do |attendee|%>
-<%=attendee.name if attendee.name!= nil %>
+<%=attendee.name%>
 <%end %>
 
 

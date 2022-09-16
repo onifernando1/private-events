@@ -1,8 +1,5 @@
 Users events:
 
-<%= @user.events.each do |event|%>
-<%=event.title %>
-<%=event.description%>
-<%=event.date%>
-<%=event.location%>
+<%= @user.attended_events.each do |event|%>
+<%=link_to event.title, event_path(event)  %>
 <%end%>
