@@ -18,7 +18,7 @@ img {
 
 .searchbar {
     height:30px;
-    width:400px;
+    width:500px;
     background-color: rgba(0, 0, 0, 0.018);
     display:flex;
     align-items: center;
@@ -47,6 +47,10 @@ img {
 
 .header_links > div {
     width:100px;
+}
+
+.header_links > div:last-child {
+    margin-left:-18px;
 }
 
 .header_links > div > a:visited {

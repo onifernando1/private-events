@@ -1,10 +1,12 @@
-<%= current_user.email%>
+<div class="user_details">
+    <%= current_user.name%>
+    <%=button_to "Sign out", destroy_user_session_path,:method => :delete, class: "signout", data: {turbo:false}%>
+    
+</div>
 
 <% @events.each do |event|  %> 
 <%= link_to event.title, event_path(event) %> 
 <%end%>
 
-<%= link_to "My account", user_path(current_user.id)%>
 
- <%=button_to "Sign out", destroy_user_session_path,:method => :delete, class: "signout"%>
 
