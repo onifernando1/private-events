@@ -1,0 +1,9 @@
+.forgot_container .actions {
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-left:-50px;
+}
+
+.forgot_container > form > .field {
+    margin-left:-30px;
+}

@@ -14,7 +14,7 @@
     margin-left:55px;
 }
 
-.sign_up_container, .log_in_container {
+.sign_up_container, .log_in_container, .forgot_container {
     display: flex;
     flex-direction: column;
     justify-content: center;
