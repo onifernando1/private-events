@@ -27,6 +27,12 @@ class InvitesController < ApplicationController
     end 
 
 
+    def destroy 
+        @event = Event.find(params[:event_id])
+        @invite = Invite.find(params[:id])
+        @invite.destroy
+        redirect_to events_path
+    end 
 
 
 end
