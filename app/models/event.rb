@@ -3,4 +3,11 @@ class Event < ApplicationRecord
     has_many :invites, foreign_key: :attended_event_id
     has_many :attendees, through: :invites
 
+    validates :title, presence: true  
+    validates :description, presence: true  
+    validates :date, presence: true  
+    validates :location, presence: true  
+
+
+
 end

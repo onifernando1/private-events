@@ -4,6 +4,7 @@
 <div class="new_event">
     <h1>Create a new event</h1> 
     <div id="error_explanation">
+      <% if @event.errors.any? %>
       <h2><%= pluralize(@event.errors.count, "error") %> prohibited this post from being saved:</h2>
       <ul>
       <% @event.errors.full_messages.each do |msg| %>

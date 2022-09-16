@@ -7,4 +7,10 @@ class User < ApplicationRecord
   has_many :invites, foreign_key: :attendee_id
   has_many :attended_events, through: :invites
   # source: :event
+
+  validates :name, presence: true  
+  validates :email, presence: true  
+  validates :email, uniqueness: true  
+  validates :encrypted_password, presence: true  
+  validates :location, presence: true  
 end
