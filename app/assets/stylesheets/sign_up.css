@@ -8,7 +8,20 @@
 
 }
 
-.actions {
+.signup_actions {
     margin-bottom:10px;
     margin-top:10px;
+    margin-left:55px;
+}
+
+.sign_up_container, .log_in_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.new_user {
+    margin-left:70px;
+    
 }
