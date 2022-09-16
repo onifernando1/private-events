@@ -28,3 +28,8 @@
     font-size:1.3rem;
     margin-top:20px;
 }
+
+.delete_event {
+    color:red;
+    text-decoration: none;
+}

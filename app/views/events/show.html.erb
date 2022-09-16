@@ -8,16 +8,20 @@
 <div>Date: <%=@event.date.to_formatted_s(:short)%></div>
 <div>Location: <%=@event.location%></div>
 <% if @event.invites.find_by attendee_id: current_user.id %>
-<%= "UNATTEND"%>
+<%= "UNATTEND" %>
 <% else %>
-<%=button_to "Attend", invites_path(event_id: @event.id)%>
-<%end%>
+<%=button_to "Attend", invites_path(event_id: @event.id), data: { turbo: false }%>
+<%end %>
 <div>Attendees:</div>
 <%@event.attendees.each do |attendee|%>
 <%if attendee.name%>
 <%=attendee.name%>
 <%end%>
 <%end %>
+        <%= link_to "Delete Event", event_path(@event), data: {
+                            turbo_method: :delete,
+                            turbo_confirm: "Are you sure?"
+                        }, class: "delete_event" %>
 </div>
 </div>
 
