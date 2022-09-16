@@ -1,9 +1,13 @@
-<div><%=@event.title%></div>
+<div class ="events_show_body_cont">
+<div class ="events_show_container">
+<div class ="event_title"><%=@event.title%></div>
+<div class = "event_image">
+            <%= image_tag "event.jpg", height:150 %>
+        </div>
 <div>Description: <%=@event.description%></div>
-<div>Date: <%=@event.date%></div>
+<div>Date: <%=@event.date.to_formatted_s(:short)%></div>
 <div>Location: <%=@event.location%></div>
 <%=button_to "Attend", invites_path(event_id: @event.id)%>
-<br/>
 <div>Attendees:</div>
 <%@event.attendees.each do |attendee|%>
 <%if attendee.name%>
@@ -11,7 +15,8 @@
 <br/>
 <%end%>
 <%end %>
-
+</div>
+</div>
 
 
 
