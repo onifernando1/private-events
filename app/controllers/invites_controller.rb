@@ -5,7 +5,7 @@ class InvitesController < ApplicationController
     end 
 
     def show
-        @invite = Invite.find(param[:id]) 
+        @invite = Invite.find(params[:id]) 
     end 
 
     def new
@@ -28,10 +28,10 @@ class InvitesController < ApplicationController
 
 
     def destroy 
-        @event = Event.find(params[:event_id])
+        # @event = Event.find(params[:event_id])
         @invite = Invite.find(params[:id])
         @invite.destroy
-        redirect_to events_path
+        # redirect_to events_path
     end 
 
 
