@@ -1,0 +1,14 @@
+.field > label {
+    margin-bottom: 20px;
+}
+
+.field > input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.actions {
+    margin-bottom:10px;
+    margin-top:10px;
+}
