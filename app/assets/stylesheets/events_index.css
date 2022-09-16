@@ -6,5 +6,57 @@
 
 .signout{
     background-color: rgba(128, 128, 128, 0.222);
-    border:1px solid grey;
+    border:1px solid rgba(128, 128, 128, 0.476);
 }
+
+.event_container {
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+    /* background-color: rgba(128, 128, 128, 0.171); */
+    border: 1px solid rgba(128, 128, 128, 0.22);
+    width:230px;
+    height:280px;
+    align-items: center;
+    justify-content: center;
+    padding:40px;
+    margin-top:20px;
+    margin-left:30px;
+    margin-bottom:20px;
+
+
+
+}
+
+.event_container > a:visited  {
+    color:black;
+}
+
+.event_container > a:hover  {
+    color:black;
+    background-color:#6f728729;
+}
+
+.event_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.event_text > div {
+    margin-top:10px;
+}
+
+.event_text > div:first-child {
+
+    font-weight:600;
+}
+
+.body_container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(350px,500px));
+}
+
+
