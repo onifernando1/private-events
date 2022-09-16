@@ -1,8 +1,12 @@
+<div class="users_show_cont">
 <h1>
 <%= current_user.name%>'s events 
 </h1>
 <div>
 <% @user.attended_events.each do |event|%>
-<%=link_to event.title, event_path(event)  %>
+<div class="attended_event_item">
+    <%=link_to event.title, event_path(event)  %>
+</div>
 <%end%>
+</div>
 </div>

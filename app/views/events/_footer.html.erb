@@ -1,5 +1,6 @@
 <div class="user_details">
+    <%if user_signed_in?%>
     <%= current_user.name%>
     <%=button_to "Sign out", destroy_user_session_path,:method => :delete, class: "signout", data: {turbo:false}%>
-    
+    <%end%>
 </div>

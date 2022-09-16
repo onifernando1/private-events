@@ -1,0 +1,27 @@
+.users_show_cont{
+    height:600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.users_show_cont > h1 {
+    font-size: 1.3rem;
+}
+
+.users_show_cont > div > a:visited{
+    color:black;
+}
+
+.attended_event_item {
+    margin-top:10px;
+}
+
+.attended_event_item > a:visited{
+    color:black;
+}
+
+.attended_event_item > a:hover {
+    background-color:#6f728729;
+}
