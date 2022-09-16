@@ -3,12 +3,10 @@
 <div><%=@event.description%></div>
 <div><%=@event.date%></div>
 <div><%=@event.location%></div>
-<%# <%= form_with url: invites_path,data:{turbo:false} do |form|%> %>
-<%# <% form.hidden_field :attended_event_id, value:@event.id %> %>
-<%# <% form.hidden_field :attendee_id, value:current_user.id %> %>
-<%# <%=form.submit "Attend!" %> %>
-<%# <%end%> %>
 <%=button_to "Attend", invites_path(event_id: @event.id)%>
-
+<div>Attendees:</div>
+<%@event.attendees.each do |attendee|%>
+<%=attendee.name %>
+<%end %>
 
 
