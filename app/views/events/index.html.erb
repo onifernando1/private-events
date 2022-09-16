@@ -4,3 +4,5 @@
 <%= link_to event.title, event_path(event) %> 
 <%end%>
 
+        <%=button_to "Sign out", destroy_user_session_path,:method => :delete, class: "signout"%>
+
