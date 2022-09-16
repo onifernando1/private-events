@@ -1,9 +1,9 @@
 <div class = "new_event_container">
-<div class="user_details">
+<%# <div class="user_details">
     <%= current_user.name%>
     <%=button_to "Sign out", destroy_user_session_path,:method => :delete, class: "signout", data: {turbo:false}%>
     
-</div>
+</div> %>
 <div class="new_event">
     <h1>Create a new event</h1> 
     <div class = "event_form">
