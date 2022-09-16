@@ -2,6 +2,7 @@
 
 <div class ="align_body_container">
     <div class="body_container" >
+    <%if @events %>
         <% @events.each do |event|  %> 
         <div class ="event_container">
         <div class = "event_image">
@@ -22,6 +23,8 @@
         </div>
 
         <%end%>
+                <%end%>
+
     </div>
     </div>
 
