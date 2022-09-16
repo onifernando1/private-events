@@ -7,7 +7,11 @@
 <div>Description: <%=@event.description%></div>
 <div>Date: <%=@event.date.to_formatted_s(:short)%></div>
 <div>Location: <%=@event.location%></div>
+<% if @event.invites.find_by attendee_id: current_user.id %>
+<%= "UNATTEND"%>
+<% else %>
 <%=button_to "Attend", invites_path(event_id: @event.id)%>
+<%end%>
 <div>Attendees:</div>
 <%@event.attendees.each do |attendee|%>
 <%if attendee.name%>
