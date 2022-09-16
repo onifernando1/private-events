@@ -18,8 +18,17 @@ class InvitesController < ApplicationController
         if @invite.save
             redirect_to @event 
         else 
-            render events_path(@event), status: :unprocessable_entity
+            # render :new, status: :unprocessable_entity
+            redirect_to @event,status: :unprocessable_entity
+
         end 
+    end 
+
+    private 
+
+    def invite_params
+        params.require(:invite).permit(:attended_event_id, :attendee_id)
+
     end 
 
 
