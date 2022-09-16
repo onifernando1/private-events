@@ -1,0 +1,24 @@
+<div class="header">
+<div class ="logo">
+OniEvents
+</div>
+<div class = "search_container">
+<img src="app/assets/images/icons8-search.svg">
+<div class="searchbar">
+</div>
+</div>
+<div class="header_links">
+    <div>
+        <%=link_to "Events index", events_path%>
+    </div>
+    <div>
+        <%=link_to "New event", new_event_path%>
+    </div>
+    <div>
+        <% if user_signed_in?%>
+        <%= link_to "My account", user_path(current_user.id)%>
+        <%end%>
+    </div>
+</div>
+</div>
+
