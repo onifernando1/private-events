@@ -1,14 +1,55 @@
-Form time 
+<div class = "new_event_container">
+<div class="user_details">
+    <%= current_user.name%>
+    <%=button_to "Sign out", destroy_user_session_path,:method => :delete, class: "signout", data: {turbo:false}%>
+    
+</div>
+<div class="new_event">
+    <h1>Create a new event</h1> 
+    <div class = "event_form">
+    <%=form_with model: @event, data:{turbo:false} do |form| %>
+    <div class="event_form_item">   
+    <div>
+     <%=form.label :title, "Title:" %>
+     </div>
+     <div>
+    <%=form.text_field :title %></div>
+    </div>
+    <div class="event_form_item">    
+         <div>
+        <%=form.label :description, "Description:" %>
+        </div>
+             <div>
 
-<%=form_with model: @event, data:{turbo:false} do |form| %>
-<%=form.label :title, "Title:" %>
-<%=form.text_field :title %>
-<%=form.label :description, "Description:" %>
-<%=form.text_field :description %>
-<%=form.label :date, "Date:" %>
-<%=form.date_field :date %>
-<%=form.label :location, "Location:" %>
-<%=form.text_field :location %>
-<%=form.submit "Submit"%>
-<%end%>
+         <%=form.text_field :description %>
+         </div>
+    </div>
+    <div class="event_form_item">
+         <div>
+        <%=form.label :date, "Date:" %>
+        </div>
+             <div>
 
+        <%=form.date_field :date %>
+        </div>
+        </div>
+    <div class="event_form_item">   
+         <div>
+
+        <%=form.label :location, "Location:" %>
+        </div>
+             <div>
+
+        <%=form.text_field :location %>
+        </div>
+    </div>
+    <div class="event_form_item">  
+    <div>
+      <%=form.submit "Submit"%>
+      </div>
+</div>
+
+    <%end%>
+    </div>
+    </div>
+</div>
