@@ -55,10 +55,10 @@
 }
 
 .body_container {
-    display: grid;
+    /* display: grid;
     grid-template-rows: auto;
     grid-template-columns: repeat(auto-fit, 410px);
-    width: 85%;
+    width: 85%; */
     
 }
 
