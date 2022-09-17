@@ -56,14 +56,19 @@
 
 .body_container {
     display: grid;
-    grid-template-rows: 1fr 1fr
+    grid-template-rows: 40px 1fr 40px 1fr;
     /* grid-template-columns: ; */
     width: 85%
     
 }
 
 .past, .future {
-    display:flex;
+    display:grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 30%;
+    overflow-x:auto;
+    overscroll-behavior-inline:contain ;
+    width:1500px;
 }
 
 

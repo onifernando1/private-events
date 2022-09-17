@@ -4,9 +4,10 @@
     <div class="body_container" >
             <% @date = Date.today %>
             <% @past = Event.where("date < #{@date}")%>
+                        <h2>Past events<h2>
+
             <div class="past">
 
-            <h2>Past events<h2>
                 <% Event.past.each do |event| %>
                 <div class ="event_container">
                                 <div class = "event_image">
@@ -29,8 +30,9 @@
                 <%end%>
             </div>
                 <%@future = Event.where("date >= #{@date}")%>
+                                    <h2>Future events<h2>
+
                 <div class = "future">
-                    <h2>Future events<h2>
                 <% Event.future.each do |event| %>
                     <div class ="event_container">
                                     <div class = "event_image">
