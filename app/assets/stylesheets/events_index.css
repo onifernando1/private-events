@@ -55,11 +55,15 @@
 }
 
 .body_container {
-    /* display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(auto-fit, 410px);
-    width: 85%; */
+    display: grid;
+    grid-template-rows: 1fr 1fr
+    /* grid-template-columns: ; */
+    width: 85%
     
+}
+
+.past, .future {
+    display:flex;
 }
 
 

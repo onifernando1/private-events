@@ -8,7 +8,7 @@ class Event < ApplicationRecord
     validates :date, presence: true  
     validates :location, presence: true  
 
-    scope :past, -> {where("date: < ?", Date.today)}
-    scope :future, -> {where("date: > ?", Date.today)}
+    scope :past, -> {where("date < ?", Date.today)}
+    scope :future, -> {where("date > ?", Date.today)}
 
 end
