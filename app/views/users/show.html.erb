@@ -3,7 +3,15 @@
 <%= current_user.name%>'s events 
 </h1>
 <div>
-<% @user.attended_events.each do |event|%>
+<p>Upcoming Events:</p>
+<% @user.attended_events.future.each do |event|%>
+<div class="attended_event_item">
+    <%=link_to event.title, event_path(event)  %>
+</div>
+<%end%>
+<br/>
+<p>Past Events:</p>
+<% @user.attended_events.past.each do |event|%>
 <div class="attended_event_item">
     <%=link_to event.title, event_path(event)  %>
 </div>

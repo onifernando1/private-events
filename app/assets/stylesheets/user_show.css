@@ -7,7 +7,7 @@
 }
 
 .users_show_cont > h1 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 .users_show_cont > div > a:visited{
@@ -24,4 +24,9 @@
 
 .attended_event_item > a:hover {
     background-color:#6f728729;
+}
+
+.users_show_cont > div > p {
+    font-size:1.2rem;
+    font-weight: 600;
 }
