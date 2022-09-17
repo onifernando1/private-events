@@ -9,10 +9,12 @@
 <div>Location: <%=@event.location%></div>
 <% if @event.invites.find_by attendee_id: current_user.id %>
 <%@invite = @event.invites.find_by attendee_id: current_user.id%>
-     <%= link_to "No longer interested", invite_path(id: @invite.id, event_id: @event.id), data: {
+     <%# <%= link_to "No longer interested", invite_path(id: @invite.id, event_id: @event.id), data: {
                             turbo_method: :delete,
                             turbo_confirm: "Are you sure?"
-                        }, class: "delete_event" %>
+                        }, class: "delete_event" %> %>
+
+                        <%= button_to "No longer interested", @invite, :method => :delete, class:"delete_event"%>
                         
     <% else %>
 <%=button_to "Attend", invites_path(event_id: @event.id), data: { turbo: false }%>

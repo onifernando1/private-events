@@ -31,7 +31,7 @@ class InvitesController < ApplicationController
         # @event = Event.find(params[:event_id])
         @invite = Invite.find(params[:id])
         @invite.destroy
-        # redirect_to events_path
+        redirect_to event_path
     end 
 
 
