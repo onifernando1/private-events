@@ -4,7 +4,7 @@
     <div class="body_container" >
             <% @date = Date.today %>
             <% @past = Event.where("date < #{@date}")%>
-                        <h2>Past events<h2>
+                        <h2>Past events</h2>
 
             <div class="past">
 
@@ -30,7 +30,7 @@
                 <%end%>
             </div>
                 <%@future = Event.where("date >= #{@date}")%>
-                                    <h2>Future events<h2>
+                                    <h2>Future events</h2>
 
                 <div class = "future">
                 <% Event.future.each do |event| %>
