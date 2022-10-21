@@ -1,6 +1,7 @@
 <div class ="events_show_body_cont">
 <div class ="events_show_container">
 <div class ="event_title"><%=@event.title%></div>
+<%= link_to "Edit", edit_event_path(@event)%>
 <div class = "event_image">
             <%= image_tag "event.jpg", height:150 %>
         </div>
