@@ -1,7 +1,9 @@
 <div class ="events_show_body_cont">
 <div class ="events_show_container">
 <div class ="event_title"><%=@event.title%></div>
+<%if current_user.id == @event.creator_id%>
 <%= link_to "Edit", edit_event_path(@event)%>
+<%end%>
 <div class = "event_image">
             <%= image_tag "event.jpg", height:150 %>
         </div>
