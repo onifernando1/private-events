@@ -28,6 +28,26 @@ img {
     color:rgba(0, 0, 0, 0.41);
 }
 
+.logo > a {
+    color:rgb(104, 23, 243);
+    font-weight: 600;
+    font-size:1.5rem;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+}
+
+.logo > a:visited {
+    color:rgb(104, 23, 243);
+    font-weight: 600;
+    font-size:1.5rem;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+}
+
 .logo {
     color:rgb(104, 23, 243);
     font-weight: 600;
