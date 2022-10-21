@@ -1,6 +1,7 @@
 
 
 <div class ="align_body_container">
+    <div class="body_container_flex">
     <div class="body_container" >
             <% @date = Date.today %>
             <% @past = Event.where("date < #{@date}")%>
@@ -47,7 +48,7 @@
                                             </div>
                                             <div>
                                             Date: <%= event.date.to_formatted_s(:short)  %>
-                                            <%= Date.today < event.date%>
+                                            <%# <%= Date.today < event.date%>
 
                                             </div>
                                         </div>
@@ -58,6 +59,7 @@
             </div>
 
   
+    </div>
     </div>
 </div>
 

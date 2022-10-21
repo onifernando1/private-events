@@ -19,7 +19,6 @@
     align-items: center;
     justify-content: center;
     padding:40px;
-
     
     margin:30px;
     margin-left:80px;
@@ -63,6 +62,7 @@
     width: 85%
     
 }
+
 
 .past, .future {
     display:grid;
