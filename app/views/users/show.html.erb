@@ -1,20 +1,25 @@
 <div class="users_show_cont">
-<h1>
-<%= current_user.name%>'s events 
-</h1>
-<div>
-<p>Upcoming Events:</p>
-<% @user.attended_events.future.each do |event|%>
-<div class="attended_event_item">
-    <%=link_to event.title, event_path(event)  %>
-</div>
-<%end%>
-<br/>
-<p>Past Events:</p>
-<% @user.attended_events.past.each do |event|%>
-<div class="attended_event_item">
-    <%=link_to event.title, event_path(event)  %>
-</div>
-<%end%>
-</div>
+    <h1>
+    <%= current_user.name%>'s events 
+    </h1>
+    <div>
+        <p>Upcoming Events:</p>
+        <% @user.attended_events.future.each do |event|%>
+            <div class="attended_event_item">
+                <%=link_to event.title, event_path(event)  %>
+            </div>
+        <%end%>
+        <br/>
+        <p>Past Events:</p>
+        <% @user.attended_events.past.each do |event|%>
+        <div class="attended_event_item">
+            <%=link_to event.title, event_path(event)  %>
+            <%end%>
+        </div>
+        <br/>
+        <p>My Hosted Events:</p>
+        <%@user.events.each do |event|%>
+        <%= link_to event.title, event_path(event)%>
+        <%end%>
+    </div>
 </div>
